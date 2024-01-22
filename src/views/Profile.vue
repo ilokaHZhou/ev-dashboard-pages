@@ -425,7 +425,7 @@
             </div>
           </div>
         </div>
-        <div class="row mt-4">
+        <!-- <div class="row mt-4">
           <div class="col-12">
             <div class="mb-5 ps-3">
               <h6 class="mb-1">Projects</h6>
@@ -552,7 +552,7 @@
               />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -560,7 +560,7 @@
 
 <script>
 import ProfileInfoCard from "./components/ProfileInfoCard.vue";
-import DefaultProjectCard from "./components/DefaultProjectCard.vue";
+// import DefaultProjectCard from "./components/DefaultProjectCard.vue";
 import MaterialSwitch from "@/components/MaterialSwitch.vue";
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import sophie from "@/assets/img/kal-visuals-square.jpg";
@@ -600,7 +600,7 @@ export default {
   },
   components: {
     ProfileInfoCard,
-    DefaultProjectCard,
+    // DefaultProjectCard,
     MaterialSwitch,
     MaterialAvatar,
   },

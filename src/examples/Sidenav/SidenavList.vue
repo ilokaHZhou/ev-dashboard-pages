@@ -43,7 +43,7 @@
           </template>
         </sidenav-collapse>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <sidenav-collapse
           url="#"
           :aria-controls="''"
@@ -57,7 +57,7 @@
             >
           </template>
         </sidenav-collapse>
-      </li>
+      </li> -->
       <li class="nav-item">
         <sidenav-collapse
           url="#"
@@ -76,7 +76,7 @@
           class="text-xs ps-4 text-uppercase font-weight-bolder text-white"
           :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'"
         >
-          ACCOUNT PAGES
+          My Account
         </h6>
       </li>
       <li class="nav-item">
@@ -97,19 +97,6 @@
           url="#"
           :aria-controls="''"
           v-bind:collapse="false"
-          collapseRef="sign-in"
-          navText="SignIn"
-        >
-          <template v-slot:icon>
-            <i class="material-icons-round opacity-10 fs-5">login</i>
-          </template>
-        </sidenav-collapse>
-      </li>
-      <li class="nav-item">
-        <sidenav-collapse
-          url="#"
-          :aria-controls="''"
-          v-bind:collapse="false"
           collapseRef="sign-up"
           navText="SignUp"
         >
@@ -118,8 +105,21 @@
           </template>
         </sidenav-collapse>
       </li>
+      <li class="nav-item">
+        <sidenav-collapse
+          url="#"
+          :aria-controls="''"
+          v-bind:collapse="false"
+          collapseRef="sign-in"
+          navText="SignOut"
+        >
+          <template v-slot:icon>
+            <i class="material-icons-round opacity-10 fs-5">login</i>
+          </template>
+        </sidenav-collapse>
+      </li>
     </ul>
-    <div class="sidenav-footer position-absolute w-100 bottom-0">
+    <!-- <div class="sidenav-footer position-absolute w-100 bottom-0">
       <div class="mx-3">
         <a
           class="btn mt-4 w-100"
@@ -128,7 +128,7 @@
           >Upgrade to pro</a
         >
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>

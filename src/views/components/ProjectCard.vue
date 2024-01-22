@@ -51,7 +51,7 @@
                 :key="index"
                 :class="[
                   index === 1 ? 'ps-2' : '',
-                  index >= 2 ? 'text-center' : '',
+                  index >= 2 ? '' : '',
                 ]"
                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
               >
@@ -63,8 +63,8 @@
             <tr
               v-for="(
                 {
-                  logo,
-                  title,
+                  // logo,
+                  // title,
                   members,
                   budget,
                   progress: { percentage, color },
@@ -73,7 +73,7 @@
               ) of projects"
               :key="index"
             >
-              <td>
+              <!-- <td>
                 <div class="d-flex px-2 py-1">
                   <div>
                     <img :src="logo" class="avatar avatar-sm me-3" alt="Logo" />
@@ -82,9 +82,9 @@
                     <h6 class="mb-0 text-sm">{{ title }}</h6>
                   </div>
                 </div>
-              </td>
+              </td> -->
               <td>
-                <div class="avatar-group mt-2">
+                <div class="avatar-group mt-2 d-flex px-3 py-1">
                   <a
                     v-for="(member, index) of members"
                     :key="index"
@@ -99,10 +99,10 @@
                   </a>
                 </div>
               </td>
-              <td class="align-middle text-center text-sm">
+              <td class="align-middle text-sm">
                 <span class="text-xs font-weight-bold"> {{ budget }} </span>
               </td>
-              <td class="align-middle d-flex justify-content-end">
+              <td class="d-flex justify-content-end">
                 <div class="progress-wrapper w-75 mx-auto">
                   <div class="progress-info">
                     <div class="progress-percentage">

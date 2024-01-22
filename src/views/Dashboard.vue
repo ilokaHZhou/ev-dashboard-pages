@@ -5,21 +5,10 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <mini-statistics-card
-              :title="{ text: 'Today\'s Money', value: '$53k' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span> than last week"
+              :title="{ text: 'Current Battery Level', value: '37%' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>Charging Right Now</span>"
               :icon="{
-                name: 'weekend',
-                color: 'text-white',
-                background: 'dark',
-              }"
-            />
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-statistics-card
-              :title="{ text: 'Today\'s Users', value: '2,300' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> than last month"
-              :icon="{
-                name: 'leaderboard',
+                name: 'ev_station',
                 color: 'text-white',
                 background: 'primary',
               }"
@@ -27,10 +16,21 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
             <mini-statistics-card
-              :title="{ text: 'New Clients', value: '3,462' }"
-              detail="<span class='text-danger text-sm font-weight-bolder'>-2%</span> than yesterday"
+              :title="{ text: 'Money Spent', value: '$530' }"
+              detail="<span class='text-danger text-sm font-weight-bolder'>+55%</span> than last month"
               :icon="{
-                name: 'person',
+                name: 'attach_money',
+                color: 'text-white',
+                background: 'dark',
+              }"
+            />
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
+            <mini-statistics-card
+              :title="{ text: 'Reward Points', value: '1,462' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+72</span> than yesterday"
+              :icon="{
+                name: 'redeem',
                 color: 'text-white',
                 background: 'success',
               }"
@@ -38,10 +38,10 @@
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
             <mini-statistics-card
-              :title="{ text: 'Sales', value: '$103,430' }"
+              :title="{ text: 'Energy Used', value: '82.65kWh' }"
               detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated"
               :icon="{
-                name: 'weekend',
+                name: 'energy_savings_leaf',
                 color: 'text-white',
                 background: 'info',
               }"
@@ -51,9 +51,9 @@
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6 mt-4">
             <chart-holder-card
-              title="Website Views"
-              subtitle="Last Campaign Performance"
-              update="campaign sent 2 days ago"
+              title="Weekly Usage"
+              subtitle="Energy Charged This Week"
+              update="updated 5 mins ago"
             >
               <reports-bar-chart
                 :chart="{
@@ -68,36 +68,8 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
             <chart-holder-card
-              title="Daily Sales"
-              subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today sales."
-              update="updated 4 min ago"
-              color="success"
-            >
-              <reports-line-chart
-                :chart="{
-                  labels: [
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec',
-                  ],
-                  datasets: {
-                    label: 'Mobile apps',
-                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
-                  },
-                }"
-              />
-            </chart-holder-card>
-          </div>
-          <div class="col-lg-4 mt-4">
-            <chart-holder-card
-              title="Completed Tasks"
-              subtitle="Last Campaign Performance"
+              title="Charging Cost"
+              subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today charging cost."
               update="just updated"
               color="dark"
             >
@@ -123,6 +95,34 @@
               />
             </chart-holder-card>
           </div>
+          <div class="col-lg-4 mt-4">
+            <chart-holder-card
+              title="Daily Rewards"
+              subtitle="Move Car After Charge Completed To Gain Rewards"
+              update="updated 4 mins ago"
+              color="success"
+            >
+              <reports-line-chart
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
+          </div>
         </div>
       </div>
     </div>
@@ -130,50 +130,50 @@
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
         <project-card
-          title="Projects"
-          description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
-          :headers="['Companies', 'Members', 'Budget', 'Progress']"
+          title="Waitlist"
+          description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>3 Ahead</span>"
+          :headers="['Associates', 'Time', 'Progress']"
           :projects="[
             {
               logo: logoXD,
               title: 'Material XD Material XD Version',
-              members: [team1, team2, team3, team4],
-              budget: '$14,000',
+              members: [team1],
+              budget: '30 mins',
               progress: { percentage: 60, color: 'info' },
             },
             {
               logo: logoAtlassian,
               title: 'Add Progress Track',
-              members: [team2, team4],
-              budget: '$3,000',
+              members: [team2],
+              budget: '5 mins',
               progress: { percentage: 10, color: 'info' },
             },
             {
               logo: logoSlack,
               title: 'Fix Platform Errors',
-              members: [team3, team1],
-              budget: 'Not set',
+              members: [team3],
+              budget: '1 hr',
               progress: { percentage: 100, color: 'success' },
             },
             {
               logo: logoSpotify,
               title: 'Launch our Mobile App',
-              members: [team4, team3, team4, team1],
-              budget: '$20,500',
+              members: [team4],
+              budget: '3 hrs 30 mins',
               progress: { percentage: 100, color: 'success' },
             },
             {
               logo: logoJira,
               title: 'Add the New Pricing Page',
               members: [team4],
-              budget: '$500',
+              budget: '15 mins',
               progress: { percentage: 25, color: 'info' },
             },
             {
               logo: logoJira,
               title: 'Redesign New Online Shop',
-              members: [team1, team4],
-              budget: '$2,000',
+              members: [team1],
+              budget: '25 mins',
               progress: { percentage: 40, color: 'info' },
             },
           ]"
@@ -182,7 +182,7 @@
       <div class="col-lg-4 col-md-6">
         <timeline-list
           class="h-100"
-          title="Orders overview"
+          title="Charge History"
           description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
         <span class='font-weight-bold'>24%</span> this month"
         >
@@ -191,7 +191,7 @@
               component: 'notifications',
               class: 'text-success',
             }"
-            title="$2400 Design changes"
+            title="Slot #1"
             date-time="22 DEC 7:20 PM"
           />
           <TimelineItem
@@ -199,7 +199,7 @@
               component: 'code',
               class: 'text-danger',
             }"
-            title="New order #1832412"
+            title="Slot #2"
             date-time="21 DEC 11 PM"
           />
           <TimelineItem
@@ -207,7 +207,7 @@
               component: 'shopping_cart',
               class: 'text-info',
             }"
-            title="Server payments for April"
+            title="Shopping Center"
             date-time="21 DEC 9:34 PM"
           />
           <TimelineItem
@@ -215,7 +215,7 @@
               component: 'credit_card',
               class: 'text-warning',
             }"
-            title="New card added for order #4395133"
+            title="Slot #3"
             date-time="20 DEC 2:20 AM"
           />
           <TimelineItem
@@ -223,7 +223,7 @@
               component: 'vpn_key',
               class: 'text-primary',
             }"
-            title="Unlock packages for development"
+            title="Slot #4"
             date-time="18 DEC 4:54 AM"
             class="pb-1"
           />
